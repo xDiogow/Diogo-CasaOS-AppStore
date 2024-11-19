@@ -21,6 +21,10 @@ services:
     network_mode: bridge
     container_name: honeygain
 x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
   author: diogow
   category: Passive Income
   developer: Diogow
@@ -34,7 +38,3 @@ x-casaos:
     en_us: Honeygain lets you earn passive income by sharing your unused internet bandwidth securely and effortlessly.
     fr_fr: Honeygain vous permet de gagner un revenu passif en partageant votre bande passante Internet inutilisée de manière sécurisée et sans effort.
     pt_pt: Honeygain permite que você ganhe uma renda passiva compartilhando sua largura de banda de internet não utilizada de forma segura e sem esforço.
-  architectures:
-    - amd64
-    - arm
-    - arm64
