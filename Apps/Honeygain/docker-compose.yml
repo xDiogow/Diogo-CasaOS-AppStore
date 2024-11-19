@@ -32,9 +32,24 @@ x-casaos:
   index: /
   port_map: ""
   scheme: http
+  store_app_id: honeygain
   title:
     custom: Honeygain
   description:
-    en_us: Honeygain lets you earn passive income by sharing your unused internet bandwidth securely and effortlessly.\nMultiline test
-    fr_fr: Honeygain vous permet de gagner un revenu passif en partageant votre bande passante Internet inutilisée de manière sécurisée et sans effort.
-    pt_pt: Honeygain permite que você ganhe uma renda passiva compartilhando sua largura de banda de internet não utilizada de forma segura e sem esforço.
+    en_us: |
+      Honeygain lets you earn passive income by sharing your unused internet bandwidth securely and effortlessly.
+
+      In order to use this application you must create a account at [Honeygain (Referred=3$ Free)](https://r.honeygain.me/DIOGO9FB13) / [Honeygain (Not Referred)](https://dashboard.honeygain.com/sign-up).
+      Don't forget to enter your credentials in application commands.
+    fr_fr: |
+      Honeygain vous permet de gagner un revenu passif en partageant votre bande passante Internet inutilisée de manière sécurisée et sans effort.
+
+      Pour utiliser cette application, vous devez créer un compte sur [Honeygain (Parrainé = 3$ Gratuit)](https://r.honeygain.me/DIOGO9FB13) / [Honeygain (Non Parrainé)](https://dashboard.honeygain.com/sign-up).
+      N'oubliez pas d'entrer vos identifiants dans les commandes de l'application.
+    pt_pt: |
+      Honeygain permite que você ganhe uma renda passiva compartilhando sua largura de banda de internet não utilizada de forma segura e sem esforço.
+
+      Para usar este aplicativo, você deve criar uma conta em [Honeygain (Com Indicação = 3$ Grátis)](https://r.honeygain.me/DIOGO9FB13) / [Honeygain (Sem Indicação)](https://dashboard.honeygain.com/sign-up).
+      Não se esqueça de inserir suas credenciais nos comandos do aplicativo.
+  tagline:
+    en_us: HoneyGain Application
