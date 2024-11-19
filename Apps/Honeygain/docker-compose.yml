@@ -34,7 +34,7 @@ x-casaos:
   scheme: http
   store_app_id: honeygain
   title:
-    custom: Honeygain
+    custom: HoneyGain
   description:
     en_us: |
       Honeygain lets you earn passive income by sharing your unused internet bandwidth securely and effortlessly.
