@@ -1,0 +1,36 @@
+name: honeygain
+services:
+  honeygain:
+    command:
+      - -tou-accept
+      - -email
+      - Email
+      - -pass
+      - Password
+      - -device
+      - DeviceName
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    hostname: honeygain
+    image: honeygain/honeygain:0.8.1
+    labels:
+      icon: https://icon.casaos.io/main/all/honeygain.png
+    restart: unless-stopped
+    network_mode: bridge
+    container_name: honeygain
+x-casaos:
+  author: diogow
+  category: Passive Income
+  developer: Diogow
+  icon: https://icon.casaos.io/main/all/honeygain.png
+  index: /
+  port_map: ""
+  scheme: http
+  title:
+    custom: Honeygain
+  description:
+    en_us: Honeygain lets you earn passive income by sharing your unused internet bandwidth securely and effortlessly.
+    fr_fr: Honeygain vous permet de gagner un revenu passif en partageant votre bande passante Internet inutilisée de manière sécurisée et sans effort.
+    pt_pt: O Honeygain permite que você ganhe uma renda passiva compartilhando sua largura de banda de internet não utilizada de forma segura e sem esforço.
