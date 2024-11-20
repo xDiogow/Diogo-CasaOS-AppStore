@@ -1,0 +1,45 @@
+name: readypython
+services:
+  main_app:
+    container_name: ready-python
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    environment:
+      - PYTHON_FILE=main.py
+      - REQUIREMENTS_FILE=requirements.txt
+    hostname: ready-python
+    image: xdiogow/ready-python:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/ready-python.png
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ready-python
+        target: /app
+    network_mode: bridge
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  author: diogow
+  category: Developer
+  developer: Diogow
+  icon: https://icon.casaos.io/main/all/ready-python.png
+  index: /
+  port_map: ""
+  scheme: http
+  store_app_id: readypython
+  title:
+    custom: ReadyPython
+  description:
+    en_us: |
+      ReadyPython is a simple and efficient solution to run Python applications.
+    fr_fr: |
+      ReadyPython est une solution simple et efficace pour exécuter des applications Python.
+    pt_pt: |
+      ReadyPython é uma solução simples e eficiente para rodar aplicações Python.
+  tagline:
+    en_us: A easy solution to run python.
