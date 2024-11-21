@@ -32,7 +32,6 @@ x-casaos:
   title:
     custom: NiceHash-GPU
   description:
-    en_us: |
-      Easily mine cryptocurrency using your GPU.
+    en_us: Easily mine cryptocurrency using your GPU.
   tagline:
     en_us: Mine cryptocurrency using your GPU.
