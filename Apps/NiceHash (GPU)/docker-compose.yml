@@ -10,8 +10,6 @@ services:
                 - gpu
     hostname: nicehash
     image: dockerhubnh/nicehash:latest
-    labels:
-      icon: https://icon.casaos.io/main/all/nicehash.png
     restart: unless-stopped
     network_mode: bridge
     environment:
@@ -32,7 +30,7 @@ x-casaos:
   scheme: http
   store_app_id: nicehash
   title:
-    custom: NiceHash (GPU)
+    custom: NiceHash-GPU
   description:
     en_us: |
       Easily mine cryptocurrency using your GPU.
