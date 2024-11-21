@@ -1,0 +1,50 @@
+name: packetstream
+services:
+  psclient:
+    container_name: psclient
+    hostname: psclient
+    image: packetstream/psclient:latest
+    environment:
+      - CID=YOUR_PACKETSTREAM_CID
+    labels:
+      icon: https://icon.casaos.io/main/all/packetstream.png
+    restart: unless-stopped
+    network_mode: bridge
+  pswatchtower:
+    container_name: pswatchtower
+    command:
+      - --cleanup
+      - --include-stopped
+      - --revive-stopped
+      - --interval
+      - "60"
+      - psclient
+    hostname: pswatchtower
+    image: containrrr/watchtower
+    labels:
+      icon: https://icon.casaos.io/main/all/packetstream.png
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    restart: unless-stopped
+    network_mode: bridge
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  author: diogow
+  category: Developer
+  developer: Diogow
+  icon: https://icon.casaos.io/main/all/packetstream.png
+  index: /
+  port_map: ""
+  scheme: http
+  store_app_id: packetstream
+  title:
+    custom: PacketStream
+  description:
+    en_us: PacketStream lets you earn passive income by sharing your unused internet bandwidth securely and effortlessly.
+  tagline:
+    en_us: PacketStream Application
