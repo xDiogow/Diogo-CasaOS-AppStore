@@ -7,7 +7,7 @@ services:
     environment:
       - CID=YOUR_PACKETSTREAM_CID
     labels:
-      icon: https://icon.casaos.io/main/all/packetstream.png
+      icon: https://avatars.githubusercontent.com/u/48444771?s=200&v=4
     restart: unless-stopped
     network_mode: bridge
   pswatchtower:
@@ -22,7 +22,7 @@ services:
     hostname: pswatchtower
     image: containrrr/watchtower
     labels:
-      icon: https://icon.casaos.io/main/all/packetstream.png
+      icon: https://avatars.githubusercontent.com/u/48444771?s=200&v=4
     volumes:
       - type: bind
         source: /var/run/docker.sock
@@ -35,9 +35,9 @@ x-casaos:
     - arm
     - arm64
   author: diogow
-  category: Developer
-  developer: Diogow
-  icon: https://icon.casaos.io/main/all/packetstream.png
+  category: Finance
+  developer: packetstream
+  icon: https://avatars.githubusercontent.com/u/48444771?s=200&v=4
   index: /
   port_map: ""
   scheme: http
