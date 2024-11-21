@@ -1,0 +1,40 @@
+name: nicehash
+services:
+  nicehash:
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          devices:
+            - capabilities:
+                - gpu
+    hostname: nicehash
+    image: dockerhubnh/nicehash:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/nicehash.png
+    restart: unless-stopped
+    network_mode: bridge
+    environment:
+      - MINING_ADDRESS=mining-address
+      - MINING_WORKER_NAME=worker-name
+    container_name: nicehash
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  author: diogow
+  category: Finance
+  developer: Diogow
+  icon: icon.png
+  index: /
+  port_map: ""
+  scheme: http
+  store_app_id: nicehash
+  title:
+    custom: NiceHash (GPU)
+  description:
+    en_us: |
+      Easily mine cryptocurrency using your GPU.
+  tagline:
+    en_us: Mine cryptocurrency using your GPU.
