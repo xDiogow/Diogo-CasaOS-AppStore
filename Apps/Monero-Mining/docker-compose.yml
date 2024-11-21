@@ -1,0 +1,73 @@
+name: moneromining
+services:
+  main_app:
+    container_name: moneromining
+    command:
+      - /home/miner/xmrig/build/xmrig
+      - --config
+      - /home/miner/config/config.json
+    environment:
+      - POOL_URL=pool.supportxmr.com:5555
+      - POOL_USER=MONERO_ADRESS
+    hostname: moneromining
+    image: pmietlicki/monero-miner:latest
+    volumes:
+      - type: bind
+        source: /DATA/AppData/moneromining
+        target: /home/miner/config
+    network_mode: bridge
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    labels:
+      icon: https://www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png 
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  author: diogow
+  category: Developer
+  developer: pmietlicki
+  icon: https://www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png
+  index: /
+  port_map: ""
+  scheme: http
+  store_app_id: moneromining
+  title:
+    custom: MoneroMining
+  description:
+    en_us: |
+      MoneroMining is a simple and efficient solution to mine Monero.
+    fr_fr: |
+      MoneroMining est une solution simple et efficace pour miner du Monero.
+    pt_pt: |
+      MoneroMining é uma solução simples e eficiente para minerar Monero.
+  tips:
+    en_us: |
+      This application requires additional setup/configuration.
+
+      1. Create your configuration at https://xmrig.com/wizard
+      2. Download the `config.json` and place it at `/DATA/AppData/moneromining`
+
+      Using GPU requires additional configuration to the application.
+    fr_fr: |
+      Cette application nécessite des configurations supplémentaires.
+
+      1. Créez votre configuration sur https://xmrig.com/wizard
+      2. Téléchargez le fichier `config.json` et placez-le dans `/DATA/AppData/moneromining`
+
+      L'utilisation d'un GPU nécessite une configuration supplémentaire pour l'application.
+    pt_pt: |
+      Este aplicativo requer configuração adicional.
+
+      1. Crie sua configuração em https://xmrig.com/wizard
+      2. Baixe o arquivo `config.json` e coloque-o em `/DATA/AppData/moneromining`
+
+      Usar um GPU requer configuração adicional no aplicativo. 
+  tagline:
+    en_us: A easy solution to mine Monero.
+    fr_fr: Une solution simple pour miner du Monero.
+    pt_pt: Uma solução fácil para minerar Monero.
