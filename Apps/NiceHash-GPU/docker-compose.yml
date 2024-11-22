@@ -17,7 +17,7 @@ services:
       - MINING_ADDRESS=mining-address
       - MINING_WORKER_NAME=worker-name
     labels:
-      icon: https://www.svgrepo.com/show/331501/nicehash.svg
+      icon: https://www.nicehash.com/static/logos/logo_small_dark.png
     container_name: nicehash
 x-casaos:
   architectures:
@@ -27,7 +27,7 @@ x-casaos:
   author: diogow
   category: Finance
   developer: Diogow
-  icon: https://www.svgrepo.com/show/331501/nicehash.svg
+  icon: https://www.nicehash.com/static/logos/logo_small_dark.png
   index: /
   port_map: ""
   scheme: http
