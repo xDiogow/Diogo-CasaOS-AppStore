@@ -8,6 +8,7 @@ services:
           devices:
             - capabilities:
                 - gpu
+    runtime: nvidia
     hostname: nicehash
     image: dockerhubnh/nicehash:latest
     restart: unless-stopped
