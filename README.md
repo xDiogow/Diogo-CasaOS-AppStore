@@ -1,4 +1,4 @@
-# Diogo-CasaOS-AppStore - Build Your CasaOS App Ecosystem
+# Diogo-CasaOS-AppStore
 
 ---
 
